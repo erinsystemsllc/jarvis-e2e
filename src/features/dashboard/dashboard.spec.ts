@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { Authentication } from "../pages/authentication-page";
+import { Authentication } from "../../pages/authentication-page";
 test("dashboard", async ({ page }) => {
   const authentication = new Authentication(page);
   await authentication.goto();

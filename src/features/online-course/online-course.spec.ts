@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
-import { Authentication } from "../pages/authentication-page";
-import { OnlineCourse } from "../pages/online-course-page";
-test("create-online-course", async ({ page }) => {
+import { Authentication } from "../../pages/authentication-page";
+import { OnlineCourse } from "../../pages/online-course-page";
+test("creates-online-course", async ({ page }) => {
   const authentication = new Authentication(page);
   await authentication.goto();
   await authentication.login("playwright", "Secret123");
