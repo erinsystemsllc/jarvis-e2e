@@ -1,10 +1,10 @@
 import { test } from "@playwright/test";
+import { Authentication } from "../pages/authentication-page";
 test("dashboard", async ({ page }) => {
-  await page.goto("#/login");
-  await page.fill('input[placeholder="Хэрэглэгчийн нэр"]', "playwright");
-  await page.fill('input[placeholder="Нууц үг"]', "Secret123");
-  await page.click("button");
-  await page.waitForURL("#/dashboard");
+  const authentication = new Authentication(page);
+  await authentication.goto();
+  await authentication.login("playwright", "Secret123");
+
   await page.isVisible("text=ЦАХИМ СУРГАЛТ");
   await page.isVisible("text=Нийт суралцагчид");
   await page.isVisible("text=90% танилцсан");
