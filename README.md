@@ -30,17 +30,6 @@ npm test:ui
 npm test:report
 ```
 
-This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.ts. You can now jump directly to writing assertions section.
-
-### Manually
-
-Add dependency and install browsers.
-
-```Shell
-npm i -D @playwright/test
-# install supported browsers
-npx playwright install
-```
 ## Examples
 
 To learn how to run these Playwright Test examples, check out our [getting started docs](https://playwright.dev/docs/intro).
